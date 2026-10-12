@@ -1,0 +1,71 @@
+{
+  "expo": {
+    "name": "Plate Scanner",
+    "slug": "plate-scanner",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "ios": {
+      "supportsTablet": false,
+      "bundleIdentifier": "com.douglasaster.platescanner",
+      "entitlements": {
+        "com.apple.developer.default-data-protection": "NSFileProtectionCompleteUnlessOpen"
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "backgroundColor": "#A00000",
+        "foregroundImage": "./assets/android-icon-foreground.png",
+        "backgroundImage": "./assets/android-icon-background.png",
+        "monochromeImage": "./assets/android-icon-monochrome.png"
+      },
+      "predictiveBackGestureEnabled": false,
+      "package": "com.douglasaster.platescanner",
+      "versionCode": 1,
+      "allowBackup": false,
+      "permissions": [
+        "android.permission.VIBRATE"
+      ],
+      "blockedPermissions": [
+        "android.permission.RECORD_AUDIO",
+        "android.permission.ACCESS_BACKGROUND_LOCATION"
+      ]
+    },
+    "plugins": [
+      "expo-router",
+      "expo-sqlite",
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "Plate Scanner uses the camera to read license plates. Frames are processed on the device and discarded unless a plate matches your list.",
+          "microphonePermission": false,
+          "recordAudioAndroid": false,
+          "barcodeScannerEnabled": false
+        }
+      ],
+      [
+        "expo-location",
+        {
+          "locationWhenInUsePermission": "Plate Scanner records your location only when a scanned plate matches your list."
+        }
+      ],
+      [
+        "expo-audio",
+        {
+          "microphonePermission": false,
+          "recordAudioAndroid": false,
+          "enableBackgroundPlayback": true
+        }
+      ],
+      "expo-asset",
+      "./plugins/withPrivacy",
+      "./plugins/withReleaseSigning",
+      "expo-font"
+    ],
+    "scheme": "platescanner",
+    "experiments": {
+      "typedRoutes": true
+    }
+  }
+}
