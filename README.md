@@ -4,7 +4,11 @@ A phone app that watches for license plates on a list you provide. Point the cam
 
 Plates that aren't on your list are never saved. Every camera frame is read on the phone and deleted right away unless it contains a match. Nothing is uploaded anywhere.
 
+This is still a proof of concept. It works great on Instagram photos of ICE vehicles. I haven't spotted an ICE vehicle in the wild with it yet. It might be useless.
+
 ## Installing and verifying the app
+
+Note: Please don't do this kind of thing unless you know what you're doing, security-risk-wise!
 
 Download the APK from this repository's **Releases** page. Android asks permission to "Install unknown apps" from your browser or file manager the first time.
 
@@ -12,10 +16,8 @@ Before installing, check that the APK is the real one and hasn't been tampered w
 
 ```text
 Package:  com.douglasaster.platescanner
-SHA-256:  XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX
+SHA-256:  EB:93:34:6A:2D:D1:73:6F:18:B6:54:02:C5:9B:C7:E6:7B:12:E2:81:90:72:D3:22:FC:67:4C:40:2B:03:C8:A6
 ```
-
-<!-- Maintainers: replace the X's with the fingerprint from step 4 of "Building an APK to share", and post the same fingerprint somewhere outside GitHub too. -->
 
 The same fingerprint is also posted outside GitHub, so an attacker who took over this page would also have to change that copy. If any of them don't match, don't install the app.
 
